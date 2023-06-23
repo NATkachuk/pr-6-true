@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="truthTable">
+    <label>Чи використовують Х І У в математиці?</label>
+    <div>
+        <form>
+            <input type="radio" id="option2" name="answer" value="true">
+            <label for="option2">Так</label><br>
+
+            <input type="radio" id="option3" name="answer" value="false">
+            <label for="option3">Ні</label><br>
+
+            <button type="submit">Відправити</button>
+        </form>
+
+        <script>
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const selectedOption = document.querySelector('input[name="answer"]:checked');
+                const selectedValue = selectedOption.value;
+
+                alert('Ваша відповідь: ' + selectedValue);
+            });
+        </script>
+
+    </div>
+</table>
+</body>
+<script src="JavaScript/Matric.js"></script>
+</html>
